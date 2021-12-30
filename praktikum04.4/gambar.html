@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum Keempat</title>
+    <style>
+        body{
+            background-color: palevioletred;
+        }
+        #dropdown {
+            margin-top: 20px;
+        }
+        #image{
+            display: flex;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <select id="dropdown" onchange="cetak()">
+        <option value="sapi">Sapi</option>
+        <option value="bengkuang">Bengkuang</option>
+        <option value="malati">Melati</option>
+        <option value="kuning">Kuning</option>
+        <option value="istana">Istana</option>
+        <option value="matahari">Matahari</option>
+    </select>
+    <br>
+    <img id="image" style="width: 50%;">
+    
+
+
+    <script>
+        const cetak = () => {
+        const dropdown = document.getElementById("dropdown");
+        const image = document.getElementById("image");
+
+        if(dropdown.value === 'sapi') {
+            image.setAttribute('src', './img/sapi.jpg');
+            alert('ini foto background sapi');
+        } else if (dropdown.value === 'bengkuang') {
+            image.setAttribute('src', './img/bengkuang.jpg');
+            alert('ini foto background bengkuang');
+        } else if (dropdown.value === 'malati') {
+            image.setAttribute('src', './img/melati.jpg');
+            alert('ini foto background melati');
+        } else if (dropdown.value === 'kuning') {
+            image.setAttribute('src', './img/kuning.jpg');
+            alert('ini foto background kuning');
+        } else if (dropdown.value === 'istana') {
+            image.setAttribute('src', './img/istana.jpg');
+            alert('ini foto backround istana');
+        } else if (dropdown.value === 'matahari') {
+            image.setAttribute('src', './img/matahari.jpg');
+            alert('ini foto background matahari');
+        }
+    }
+    </script>
+</body>
+</html>
